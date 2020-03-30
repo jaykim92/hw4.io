@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- start by building the basic HTML elements -->
+  <div class="container">
+    <div class="container" id='timer-div'>
+      <span id="timer">Timer: 75</span>
+    </div>
+    
+    <div class="container" id="home-container">
+      <h1>Javascript Quiz</h1>
+      <p>Answer these multiple choice questions within 75 seconds. If you answer incorrectly, you lose 10 seconds.</p>
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn">Start</button>
+      </div>
+    </div>
+
+    <div id="question-container" class="container hide">
+      <div id="question">Question</div>
+      <div id="answer-buttons">
+        <button class="btn choice">Answer 1</button>
+        <button class="btn choice">Answer 2</button>
+        <button class="btn choice">Answer 3</button>
+        <button class="btn choice">Answer 4</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="controls">
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+
+    <div class="container hide form-container">
+      <div class="user-input">
+        <label for="new-score">Enter your name</label>
+        <input type="text" id="userName">
+        <button class="btn submit">Submit</button>
+      </div>
+      <ol id='score-list' class="scoreboard"></ol>
+    </div>
+  </div>
+  <!-- i am referencing the javascript in the end because I was getting an error about the properties now being found even though I was pulling the DOM elements correctly -->
+  <script src="script2.js"></script>
+</body>
+</html>
